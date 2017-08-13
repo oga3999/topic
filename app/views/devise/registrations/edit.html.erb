@@ -1,4 +1,4 @@
-<div class="container">
+<div class="devise-box container">
   <div class="col-md-4 col-md-offset-4 col-sm-10" >
     <h2>プロフィール編集 <%= resource_name.to_s.humanize %></h2>
 
@@ -13,6 +13,12 @@
       <div class="field">
         <%= f.label :名前 %><br />
         <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= profile_img(@user) if profile_img(@user) %>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -43,12 +49,12 @@
     <% end %>
 
       <div class="actions">
-        <%= f.submit "Update" %>
+        <%= f.submit "Update", class:"btn btn-default btn-outline btn-xs" %>
       </div>
 
     <h3>アカウントの削除</h3>
 
-    <p>本当に削除しますか? <%= button_to "確定", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p>本当に削除しますか?  <%= button_to "確定", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"confirm-btn btn btn-outline btn-default btn-xs" %></p>
 
     <%= link_to "戻る", :back %>
 
@@ -57,14 +63,8 @@
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
       </div>
 
-      <div class="field">
-        <%= profile_img(@user) if profile_img(@user) %>
-        <%= f.file_field :avatar %>
-        <%= f.hidden_field :avatar_cache %>
-      </div>
-
       <div class="actions">
-        <%= f.submit "更新", class: "btn btn-primary btn-block" %>
+        <%= f.submit "更新", class: "btn btn-outline btn-primary btn-block" %>
       </div>
     <% end %>
   </div>

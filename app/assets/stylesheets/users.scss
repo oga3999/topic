@@ -1,0 +1,118 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-profile-box {
+  color: #FFF;
+  text-align: center;
+  p {
+    margin: 2px 0px 0px 0px;
+  }
+}
+
+.user-message {
+  color: #FFF;
+}
+
+.message-field {
+  margin:70px 0px 5px 0px
+}
+
+.message-submit {
+  width: 100%;
+  overflow: hidden;
+  .message-btn {
+    margin: 1px 0px 10px 0px;
+    float: right;
+  }
+  .message-link-btn {
+    margin: 1px 0px 10px 0px;
+    float: left;
+  }
+}
+
+.segment {
+  margin-top: 10px;
+  overflow: hidden;
+  width: 100%;
+  .current-user-message {
+    float: right;
+  }
+  .no-current-user-message {
+    float: left;
+  }
+}
+
+.current-user-message{
+  color: #424242;
+  position: relative;
+  margin: 15px 40px 15px 0;
+  padding: 15px;
+  background: #fff;
+  border-radius: 30px;
+  p {
+      margin: 0;
+      padding: 0;
+  }
+}
+
+.no-current-user-message {
+    color: #424242;
+    position: relative;
+    margin: 15px 0px 15px 40px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 30px;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.current-user-message:before{
+  content: "";
+  position: absolute;
+  right: -38px;
+  width: 13px;
+  height: 12px;
+  bottom: 0;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.no-current-user-message:before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 13px;
+    height: 12px;
+    bottom: 0;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.current-user-message:after {
+  content: "";
+  position: absolute;
+  right: -21px;
+  width: 20px;
+  height: 18px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.no-current-user-message:after {
+    content: "";
+    position: absolute;
+    left: -21px;
+    width: 20px;
+    height: 18px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.header {
+  border-bottom: 1px solid #424242;
+  margin-bottom: 5px;
+}

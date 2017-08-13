@@ -1,2 +1,11 @@
-<h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<div class="top-box container" >
+  <h1 class="top_h1">Topic Up</h1>
+  <p class="top_p">Let's expand the topic, by you.</p>
+  <div class="row">
+    <div class="top-btn">
+      <p><%= link_to 'Log in', new_user_session_path, class:"top-btn2 btn btn-default btn-outline" %></p>
+      <p><%= link_to 'Sign up', new_user_registration_path, class:"top-btn2 btn btn-default btn-outline" %></p>
+    </div>
+  </div>
+  <p class = "top_p2">Please, have fun.</p>
+</div>

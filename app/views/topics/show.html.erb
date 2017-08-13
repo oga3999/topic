@@ -1,6 +1,35 @@
-<p><strong>Title</strong></p>
-<p><%= @topic.title %></p>
-<p><strong>Content</strong></p>
-<p><%= @topic.content %></p>
-<strong>作成時間:</strong>
-<%= @blog.created_at.strftime("%y/%m/%d %p %l:%M") %>
+<div class="topic-show-box container">
+  <div class="col-md-8 col-md-offset-2 col-sm-10">
+    <div class="show-box">
+      <div class="show-title-box">
+        <div class="show-title">
+          <span class="title-p"><%= @topic.title %></span>
+        </div>
+        <div class="created_at">
+          <%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %>
+        </div>
+      </div>
+      <div class="show-content">
+        <p><%= @topic.content %></p>
+      </div>
+      <btn class="show-btn-box">
+        <div class="show-btn">
+          <% if current_user.id == @topic.user.id %>
+            <%= link_to '編集', edit_topic_path(@topic), class:"btn btn-default btn-outline" %>
+            <%= link_to '戻る', topics_path, class:"btn btn-default btn-outline" %>
+          <% end %>
+       </div>
+     </btn>
+    </div>
+
+    <div class="comment-p">
+      <p>【 コメント一覧 】</p>
+    </div>
+    <div class="comment-box">
+      <div id = "comment_area">
+        <%= render partial: 'comments/index', locals: { comments: @comments, topic: @topic } %>
+      </div>
+      <%= render partial: 'comments/form', locals: { comment: @comment, topic: @topic } %>
+    </div>
+  </div>
+</div>

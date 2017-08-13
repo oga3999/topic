@@ -1,0 +1,16 @@
+<div class="users-list-box container">
+  <h2>Users List</h2>
+  <% @users.each do |user| %>
+    <div class="col-md-2 col-sm-4 col-xs-6 ">
+      <% if user.id != current_user.id %>
+        <div class="user-profile-box">
+          <p><%= profile_img(user) %></p>
+          <p><%= user.name %></p>
+          <p><%= link_to 'Message', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post', class:"user-message"%></p>
+          <p><%= user.email %></p>
+          <p><%= render partial: 'follow_form', locals: { user: user } if signed_in?   %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

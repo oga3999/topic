@@ -1,0 +1,18 @@
+// Place all the styles related to the Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message-index-box {
+  h2 {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+  }
+}
+
+.message-box {
+  margin: 0 auto;
+  width: 100%;
+  min-height: calc(100vh - 63px);
+  background: linear-gradient(#007991, #78ffd6);
+}

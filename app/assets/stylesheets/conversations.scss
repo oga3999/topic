@@ -1,0 +1,19 @@
+// Place all the styles related to the Conversations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.conversation-box {
+  margin-bottom: 10px;
+  h2 {
+    border-bottom: 1px solid #FFF;
+  }
+}
+
+.conversation-btn {
+  width: 100% auto;
+  background: #FFF;
+  border-radius: 10px;
+  float: left;
+  margin: 5px;
+  padding: 15px;
+}

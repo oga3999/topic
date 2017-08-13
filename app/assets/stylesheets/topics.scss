@@ -1,3 +1,118 @@
 // Place all the styles related to the topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+  text-align: center;
+}
+
+.topics-box,.topic-show-box{
+  margin: 0 auto;
+  width: 100%;
+  min-height: calc(100vh - 63px);
+  background-color: #009688;
+}
+
+.form-content-area {
+  resize: vertical;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.form-btn {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+  .topics-index-box {
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    padding: 5px 5px 2px 5px;
+    overflow: hidden;
+    .topic-content {
+      float: left;
+      padding: 5px;
+      width: 100%;
+      border-top: 1px solid #BBB;
+    }
+    .topic-title {
+      font-size: 18px;
+      float: left;
+      margin:5px 3px 3px 3px;
+      line-height: 20px;
+      vertical-align: middle;
+      .topic-link {
+        color: #666;
+      }
+    }
+    .topic-btn {
+      float: right;
+      margin: 3px;
+    }
+  }
+.user-profile-box{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+  .user-profile {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 3px;
+    float: right;
+  }
+}
+
+.profile_img{
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.show-box {
+  overflow: hidden;
+  margin:10px 0px 10px 0px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #FFF;
+  p{
+    color: #FFF;
+    font-size: 15px;
+  }
+  .show-title-box{
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    padding: 5px 0px 5px 0px;
+    .show-title {
+      float: left;
+      .title-p {
+        color: #FFF;
+        font-size: 30px;
+      }
+    }
+    .created_at {
+      padding-top: 27px;
+      float: right;
+      color: #fff;
+    }
+  }
+  .show-content {
+    padding:10px 0px 5px 0px;
+  }
+}
+
+.comment-p {
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  .show-btn-box {
+    width: 100%;
+    .show-btn {
+      float: right;
+    }
+  }

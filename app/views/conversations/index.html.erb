@@ -1,0 +1,12 @@
+<div class="conversation-box container">
+  <div class="conversation-members col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <h2>メッセージ一覧</h2>
+    <% @conversations.each do |conversation| %>
+      <div class="col-md-3 col-sm12">
+          <% if conversation.target_user(current_user).present? %>
+              <%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation), class:"conversation-btn" %>
+          <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -7,6 +7,8 @@ class TopicsController < ApplicationController
   end
 
   def show
+    @comment = @topic.comments.build
+    @comments = @topic.comments
   end
 
   def new
@@ -19,8 +21,10 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(topic_params)
+    @topic.user_id = current_user.id
     if @topic.save
       redirect_to topics_path,notice:"topicを投稿しました！"
+      NoticeMailer.sendmail_topic(@topic).deliver
     else
       render 'new'
     end
