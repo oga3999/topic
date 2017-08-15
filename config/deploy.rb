@@ -1,7 +1,7 @@
 lock '3.6.0'
 
 # デプロイするアプリケーション名
-set :application, 'big_task_3'
+set :application, 'TopicUp'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
 set :repo_url, 'https://github.com/oga3999/big_task_3.git'
@@ -25,6 +25,8 @@ set :rbenv_type, :system
 
 #出力するログのレベル。
 set :log_level, :debug
+
+set :bundle_flags, "" 
 
 namespace :deploy do
   desc 'Restart application'
