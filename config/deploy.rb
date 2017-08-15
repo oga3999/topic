@@ -1,7 +1,7 @@
 lock '3.6.0'
 
 # デプロイするアプリケーション名
-set :application, 'TopicUp'
+set :application, 'big_task_3'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
 set :repo_url, 'https://github.com/oga3999/big_task_3.git'
