@@ -29,7 +29,8 @@
       <div id = "comments_area">
         <%= render partial: 'comments/index', locals: { comments: @comments, topic: @topic } %>
       </div>
-      <%= render partial: 'comments/form', locals: { comment: @comment, topic: @topic } %>
+        <%= render partial: 'comments/form', locals: { comment: @comment, topic: @topic } %>
     </div>
   </div>
 </div>
+<div id="product-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>

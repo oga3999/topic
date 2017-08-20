@@ -12,6 +12,23 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comment = Comment.find(params[:id])
+    @topic = @comment.topic
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    @topic = @comment.topic
+    respond_to do |format|
+      if @comment.update(comment_params)
+        format.html {redirect_to topic_path(@topic), notice:'コメントを編集しました'}
+      else
+        format.html {redirect_to topic_path(@topic), alert:'コメントの編集に失敗しました'}
+      end
+    end
+  end
+
   def destroy
     @comment = Comment.find(params[:id])
     respond_to do |format|
@@ -22,7 +39,6 @@ class CommentsController < ApplicationController
       end
     end
   end
-
 
   private
   def comment_params
